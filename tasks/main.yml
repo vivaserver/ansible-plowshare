@@ -21,7 +21,7 @@
   sudo: yes
 
 - name: ensure packages available
-  apt: pkg=curl state=latest install_recommends=no
+  apt: pkg=curl=7.27 install_recommends=no
   when: ansible_lsb.codename == 'precise'
   tags:
     - plowshare
