@@ -1,0 +1,40 @@
+---
+- name: ensure Quantal main repo.
+  apt_repository: repo='deb http://archive.ubuntu.com/ubuntu quantal main'
+  when: ansible_lsb.codename == 'precise'
+  tags:
+    - plowshare
+  sudo: yes
+
+- name: ensure Quantal curl package
+  copy: src=files/curl-quantal dest=/etc/apt/preferences.d/
+  when: ansible_lsb.codename == 'precise'
+  tags:
+    - plowshare
+  sudo: yes
+
+- name: ensure package archive up-to-date
+  apt: update_cache=yes
+  when: ansible_lsb.codename == 'precise'
+  tags:
+    - plowshare
+  sudo: yes
+
+- name: ensure packages available
+  apt: pkg=curl state=latest install_recommends=no
+  when: ansible_lsb.codename == 'precise'
+  tags:
+    - plowshare
+  sudo: yes
+
+- name: ensure repo available
+  apt_repository: repo='ppa:plowsharepackagers/ppa'
+  tags:
+    - plowshare
+  sudo: yes
+
+- name: Ensure packages available
+  apt: pkg=plowshare state=present install_recommends=no
+  tags:
+    - plowshare
+  sudo: yes
