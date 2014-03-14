@@ -1,28 +1,28 @@
 ---
 - name: ensure Quantal main repo.
   apt_repository: repo='deb http://archive.ubuntu.com/ubuntu quantal main'
-  when: ansible_lsb.codename == 'precise'
+  when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
   tags:
     - plowshare
   sudo: yes
 
 - name: ensure Quantal curl package
   copy: src=files/curl-quantal dest=/etc/apt/preferences.d/
-  when: ansible_lsb.codename == 'precise'
+  when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
   tags:
     - plowshare
   sudo: yes
 
 - name: ensure package archive up-to-date
   apt: update_cache=yes
-  when: ansible_lsb.codename == 'precise'
+  when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
   tags:
     - plowshare
   sudo: yes
 
 - name: ensure packages available
-  apt: pkg=curl=7.27 install_recommends=no
-  when: ansible_lsb.codename == 'precise'
+  apt: pkg=curl=7.27
+  when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
   tags:
     - plowshare
   sudo: yes
