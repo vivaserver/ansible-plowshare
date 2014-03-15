@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: "Cristian R. Arroyo"
-  description: plowshare Ubuntu package from official PPA repository
+  description: Installs plowshare from it's official Ubuntu PPA repository
   license: MIT
   min_ansible_version: 1.4
   platforms:
