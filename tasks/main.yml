@@ -47,4 +47,3 @@
   copy: src=../files/plowshare.conf dest=~/.config/plowshare/
   tags:
     - plowshare
-  sudo: yes
