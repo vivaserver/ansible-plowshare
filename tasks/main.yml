@@ -11,7 +11,7 @@
   sudo: yes
 
 - name: ensure Quantal curl package
-  copy: src=files/curl-quantal dest=/etc/apt/preferences.d/
+  copy: src=../files/curl-quantal dest=/etc/apt/preferences.d/
   when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
   tags:
     - plowshare
