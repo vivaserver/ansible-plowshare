@@ -1,6 +1,9 @@
 ---
 - name: ensure PPA repos addition supported
-  apt: pkg=python-pycurl state=present
+  apt: pkg={{ item }} state=present
+  with_items:
+    - python-apt
+    - python-pycurl
   sudo: yes
 
 - name: ensure Quantal main repo.
