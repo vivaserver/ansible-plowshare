@@ -10,7 +10,7 @@ but the latest curl version for that Ubuntu release is 7.22, a [known bug][bug].
 
 Thus curl 7.27 is "backported" from the Ubuntu 12.10 repository by [apt pinning][pin] when installing this role on Ubuntu 12.04.
 
-If you're interested in the technigue selective package installation, read this fine [blog article][blo].
+If you're interested in the technigue selective package installation, read this [fine blog article][blo].
 
 ## Requirements
 
@@ -24,7 +24,7 @@ Ubuntu 12.04 or later, including [elementaryOS][eos] 0.2 "Luna".
 
     - hosts: localhost
       roles:
-         - { role: vivaserver.ansible-plowshare }
+        - vivaserver.ansible-plowshare
 
 ## License
 
