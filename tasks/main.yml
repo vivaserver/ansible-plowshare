@@ -1,4 +1,8 @@
 ---
+- name: ensure PPA repos addition supported
+  apt: pkg=python-pycurl state=present
+  sudo: yes
+
 - name: ensure Quantal main repo.
   apt_repository: repo='deb http://archive.ubuntu.com/ubuntu quantal main'
   when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
