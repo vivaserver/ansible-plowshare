@@ -4,7 +4,7 @@ Installs the plowshare package from it's official Ubuntu PPA.
 
 ## Requirements
 
-Ubuntu 12.04 or later.
+Ubuntu 12.04 or later, including elementaryOS 0.2 "Luna".
 
 ## Example Playbook
 
