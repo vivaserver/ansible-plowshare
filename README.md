@@ -6,6 +6,10 @@ Installs the plowshare package from it's official Ubuntu PPA.
 
 Ubuntu 12.04 or later, including elementaryOS 0.2 "Luna".
 
+## Installation
+
+    $ ansible-galaxy install vivaserver.ansible-plowshare 
+
 ## Example Playbook
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
