@@ -42,3 +42,9 @@
   tags:
     - plowshare
   sudo: yes
+
+- name: ensure sane Plowshare conf.
+  copy: src=../files/plowshare.conf dest=~/.config/plowshare/
+  tags:
+    - plowshare
+  sudo: yes
