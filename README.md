@@ -24,7 +24,7 @@ Ubuntu 12.04 or later, including [elementaryOS][eos] 0.2 "Luna".
 
     - hosts: localhost
       roles:
-        - vivaserver.ansible-plowshare
+        - vivaserver.plowshare
 
 ## License
 
