@@ -18,7 +18,7 @@ Ubuntu 12.04 or later, including [elementaryOS][eos] 0.2 "Luna".
 
 ## Installation
 
-    $ ansible-galaxy install vivaserver.ansible-plowshare 
+    $ ansible-galaxy install vivaserver.plowshare 
 
 ## Example Playbook
 
