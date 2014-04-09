@@ -14,7 +14,7 @@ If you're interested in the technigue selective package installation, read this 
 
 ## Requirements
 
-Ubuntu 12.04 or later, including [elementaryOS][eos] 0.2 "Luna".
+Ubuntu 12.04 "Precise Pangolin" or later, including [elementaryOS][eos] 0.2 "Luna".
 
 ## Installation
 
