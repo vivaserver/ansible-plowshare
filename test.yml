@@ -1,7 +1,7 @@
 # just for testing the role:
 #   $ # note ansible.cfg defaults
-#   $ ansible-playbook -vv --ask-pass --ask-sudo-pass test.yml
+#   $ ansible-playbook -vv -K --sudo test.yml
 ---
 - hosts: localhost
   roles:
-    - ansible-plowshare
+    - plowshare
