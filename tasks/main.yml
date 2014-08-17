@@ -6,15 +6,8 @@
     - python-pycurl
   sudo: yes
 
-- name: ensure Quantal main repo.
-  apt_repository: repo='deb http://archive.ubuntu.com/ubuntu quantal main'
-  when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
-  tags:
-    - plowshare
-  sudo: yes
-
-- name: ensure Quantal curl package
-  copy: src=../files/curl-quantal dest=/etc/apt/preferences.d/
+- name: ensure cURL main repo.
+  apt_repository: repo='ppa:costamagnagianfranco/ettercap-stable-backports' state=present
   when: ansible_lsb.codename == 'precise' or ansible_lsb.codename == 'luna'
   tags:
     - plowshare
