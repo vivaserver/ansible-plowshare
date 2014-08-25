@@ -8,9 +8,7 @@ It has a small footprint (few shell scripts). No java, no python!
 This role addresses the fact that the `plowshare` package for Ubuntu 12.04 depends on curl >= 7.24, 
 but the latest curl version for that Ubuntu release is 7.22, a [known bug][bug].
 
-Thus curl 7.27 is "backported" from the Ubuntu 12.10 repository by [apt pinning][pin] when installing this role on Ubuntu 12.04.
-
-If you're interested in the technigue selective package installation, read this [fine blog article][blo].
+Thus the *unstable* PPA [costamagnagianfranco/ettercap-stable-backports][ppa] is used for get an updated version of Curl that fulfills the plowshare package dependency.
 
 ## Requirements
 
@@ -38,5 +36,7 @@ MIT
 [ppa]: https://launchpad.net/~plowsharepackagers/+archive/ppa
 [eos]: http://elementaryos.org
 [bug]: https://bugs.launchpad.net/plowshare/+bug/1254152
+[ppa]: https://code.launchpad.net/~costamagnagianfranco/+archive/ubuntu/ettercap-stable-backports/+index?field.series_filter=precise
+
 [pin]: https://help.ubuntu.com/community/PinningHowto
 [blo]: http://www.jaredlog.com/?p=1820
